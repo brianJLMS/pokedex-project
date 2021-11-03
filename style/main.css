@@ -1,0 +1,176 @@
+:root {
+  --primary: #ff4040;
+  --secondary: #4e4eff;
+  --tercery: #fd7bfd;
+  --fourth: #ffd900;
+  --gray: #adadad;
+  --dark: #272727;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/* main {
+  flex-grow: 1;
+} */
+
+.head {
+  height: 17rem;
+  text-align: center;
+  background-color: var(--primary);
+}
+
+.head__title {
+  font-family: "Alfa Slab One", cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2rem;
+  font-size: 5rem;
+  color: var(--fourth);
+}
+
+.head__links {
+  font-size: 3rem;
+  background-color: var(--secondary);
+  padding: 2rem;
+}
+
+.loader {
+  display: block;
+  margin: auto;
+  width: 11rem;
+  height: auto;
+}
+
+.pokemons {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 32.2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  text-align: center;
+}
+
+.pokemons__container {
+  margin: 1rem auto;
+  width: 20rem;
+  height: 30rem;
+}
+
+.pokemons__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.pokemons__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.pokemons__image {
+  width: 100%;
+}
+
+.pokemons__card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 2rem auto;
+  border-radius: 1.6rem;
+  padding: 1.3rem;
+  border: 0.5rem solid var(--gray);
+  background-image: radial-gradient(#fff, var(--tercery));
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.pokemons__name {
+  padding-top: 4rem;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--fourth);
+  font-family: "Alfa Slab One", cursive;
+}
+
+.pokemons__stats {
+  color: var(--secondary);
+}
+
+.pokemons__stats span {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pokemons__card h3 {
+  color: var(--fourth);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.pokemons__card--back {
+  transform: rotateY(180deg);
+}
+
+.footer {
+  height: 15rem;
+  background-color: var(--gray);
+  margin-top: 4rem;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+  }
+}
+
+.footer__text {
+  font-size: 1.7rem;
+}
+
+.footer__text span {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+.footer__icons {
+  font-size: 3rem;
+}
+
+.footer__icons a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.footer__icons a:hover {
+  color: var(--tercery);
+}
